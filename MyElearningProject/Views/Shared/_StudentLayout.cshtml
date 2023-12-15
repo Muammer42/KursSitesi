@@ -1,0 +1,106 @@
+﻿
+@{
+    Layout = null;
+}
+
+<!DOCTYPE html>
+<html lang="en">
+
+@Html.Action("PartialHead", "AdminLayout")
+<body class="fix-header fix-sidebar card-no-border">
+    @Html.Action("PartialPreloader", "AdminLayout")
+    <div id="main-wrapper">
+        ﻿<header class="topbar">
+            <nav class="navbar top-navbar navbar-toggleable-sm navbar-light">
+
+                <div class="navbar-header">
+                    <a class="navbar-brand" href="index.html">
+                        <!-- Logo icon --><b>
+                            <!--You can put here icon as well // <i class="wi wi-sunset"></i> //-->
+                            <!-- Light Logo icon -->
+                            <img src="~/Templates/material-lite-master/assets/images/logo-light-icon.png" alt="homepage" class="light-logo" />
+                        </b>
+
+                        @*<span>
+
+                            <img src="~/Templates/material-lite-master/assets/images/logo-light-text.png" class="light-logo" alt="homepage" />
+                        </span>*@
+                    </a>
+                </div>
+
+                <div class="navbar-collapse">
+
+                    <ul class="navbar-nav mr-auto mt-md-0">
+
+                        <li class="nav-item"> <a class="nav-link nav-toggler hidden-md-up text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="mdi mdi-menu"></i></a> </li>
+
+                        <li class="nav-item hidden-sm-down search-box">
+                            <a class="nav-link hidden-sm-down text-muted waves-effect waves-dark" href="javascript:void(0)"><i class="ti-search"></i></a>
+                            <form class="app-search">
+                                <input type="text" class="form-control" placeholder="Search & enter"> <a class="srh-btn"><i class="ti-close"></i></a>
+                            </form>
+                        </li>
+                    </ul>
+
+                    <ul class="navbar-nav my-lg-0">
+
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-muted waves-effect waves-dark" href="" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                <img src="~/Templates/material-lite-master/assets/images/users/4.jpg" alt="user" class="profile-pic m-r-10" />Muammer Metin
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        ﻿<aside class="left-sidebar">
+            <!-- Sidebar scroll-->
+            <div class="scroll-sidebar">
+                <!-- Sidebar navigation-->
+                <nav class="sidebar-nav">
+                    <ul id="sidebarnav">
+                        <li>
+                            <a class="waves-effect waves-dark" href="/Profile/Index/" aria-expanded="false"><i class="mdi mdi-account-check"></i><span class="hide-menu">Öğrenci Bilgileri</span></a>
+                        </li>
+                        <li>
+                            <a class="waves-effect waves-dark" href="/StudentCourse/Index/" aria-expanded="false"><i class="mdi mdi-book-multiple"></i><span class="hide-menu">Kurslarım</span></a>
+                        </li>
+                        @*<li>
+                            <a class="waves-effect waves-dark" href="/Review/Index/" aria-expanded="false"><i class="mdi mdi-access-point"></i><span class="hide-menu">Puan Ver</span></a>
+                        </li>*@
+                        <li>
+                            <a class="waves-effect waves-dark" href="/Login/Index/" aria-expanded="false"><i class="mdi mdi-exit-to-app"></i><span class="hide-menu">Çıkış Yap</span></a>
+                        </li>
+
+                        <li>
+                            <a class="waves-effect waves-dark" href="/Default/Index" aria-expanded="false"><i class="mdi mdi-laptop"></i><span class="hide-menu">Siteye Git</span></a>
+                        </li>
+
+                    </ul>
+                    @*<div class="text-center m-t-30">
+                            <a href="https://themewagon.com/themes/material-bootstrap-4-free-admin-template/" class="btn waves-effect waves-light btn-warning hidden-md-down">Download Now</a>
+                        </div>*@
+                </nav>
+                <!-- End Sidebar navigation -->
+            </div>
+            <!-- End Sidebar scroll-->
+            <!-- Bottom points-->
+            <div class="sidebar-footer">
+                <!-- item--><a href="" class="link" data-toggle="tooltip" title="Settings"><i class="ti-settings"></i></a>
+                <!-- item--><a href="" class="link" data-toggle="tooltip" title="Email"><i class="mdi mdi-gmail"></i></a>
+                <!-- item--><a href="" class="link" data-toggle="tooltip" title="Logout"><i class="mdi mdi-power"></i></a>
+            </div>
+            <!-- End Bottom points-->
+        </aside>
+        <div class="page-wrapper">
+            <div class="container-fluid">
+
+                @RenderBody()
+            </div>
+            @Html.Action("PartialFooter", "AdminLayout")
+        </div>
+    </div>
+    @Html.Action("PartialScript", "AdminLayout")
+</body>
+</html>

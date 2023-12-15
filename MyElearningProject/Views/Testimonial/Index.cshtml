@@ -1,0 +1,47 @@
+﻿﻿@model List<MyElearningProject.DAL.Entites.Testimonial>
+@{
+    ViewBag.Title = "Index";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<div class="row">
+    <div class="col-12">
+        <div class="card">
+            <div class="card-block">
+                Referans Listesi
+                <br />
+                <table class="table table-bordered">
+                    <tr>
+                        <th>#</th>
+                        <th>Referansın Adı Soyadı</th>
+                        <th>Yorum Başlığı</th>
+                        <th>Referansın Resmi</th>
+                        <th>Yorum İçeriği</th>
+                        @*<th>Yorum İçeriği</th>*@
+                        <th>Sil</th>
+                        <th>Güncelle</th>
+                    </tr>
+                    @foreach (var item in Model)
+                    {
+                        <tr>
+                            <td>@item.TestimonialID</td>
+                            <td>@item.NameSurname</td>
+                            <td>@item.Title</td>
+                            <td><img src="@item.ImageUrl" style="height:50px; width:60px;border-radius:50%" /></td>
+                            <td>@item.Comment</td>
+                            @*<td>@item.TestimonialID</td>*@
+                           
+                            <td><a href="/Testimonial/DeleteTestimonial/@item.TestimonialID" class="btn btn-outline-danger">Sil</a></td>
+                            <td><a href="/Testimonial/UpdateTestimonial/@item.TestimonialID" class="btn btn-outline-success">Güncelle</a></td>
+                        </tr>
+                    }
+
+
+
+
+                </table>
+                <a href="/Testimonial/AddTestimonial/" class="btn btn-outline-primary">Yeni Bilgi Girişi</a>
+            </div>
+        </div>
+    </div>
+</div>

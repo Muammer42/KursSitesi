@@ -1,0 +1,23 @@
+﻿@model MyElearningProject.DAL.Entites.About
+@{
+    ViewBag.Title = "UpdateAbout";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+
+<h2>Referans Güncelleme Sayfası</h2>
+
+<form method="post">
+    <label>Referans ID</label>
+    @Html.TextBoxFor(x => x.AboutID, new { @class = "form-control" })
+    <label>Referans Adı Soyadı</label>
+    @Html.TextBoxFor(x => x.AboutName, new { @class = "form-control" })
+    <label>Referans Ünvan</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <label>Referans Görsel</label>
+    @Html.TextBoxFor(x => x.Description1, new { @class = "form-control" })
+    <label>Referans Yorumu</label>
+    @Html.TextAreaFor(x => x.Description2, 5, 1, new { @class = "form-control" })
+    <br />
+    <button class="btn btn-outline-success">Verileri Güncelle</button>
+</form>

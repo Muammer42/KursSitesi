@@ -1,0 +1,18 @@
+﻿﻿@model List<MyElearningProject.DAL.Entites.About>
+
+<div class="container-xxl py-5">
+    <div class="container">
+        <div class="row g-5">
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.1s" style="min-height: 400px;">
+                <div class="position-relative h-100">
+                    <img class="img-fluid position-absolute w-100 h-100" src="/Templates/Learning/img/about.jpg" alt="" style="object-fit: cover;">
+                </div>
+            </div>
+            <div class="col-lg-6 wow fadeInUp" data-wow-delay="0.3s">
+                @foreach (var item in Model)
+                {
+                    <h6 class="section-title bg-white text-start text-primary pe-3">@item.AboutName</h6>
+
+                    <p class="mb-4">@item.Description1.</p>
+                    <p class="mb-4">@item.Description2</p>
+                }

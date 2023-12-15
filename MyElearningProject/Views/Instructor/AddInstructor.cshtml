@@ -1,0 +1,36 @@
+﻿@model MyElearningProject.DAL.Entites.Instructor
+@{
+    ViewBag.Title = "AddInstructor";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Yeni Eğitmen Ekleme Sayfası</h2>
+
+<form method="post">
+    <label>Eğitmen Adını Giriniz</label>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br /><br />
+    <label>Eğitmen Soyadını Giriniz</label>
+    @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+    <br /><br />
+    <label>Eğitmen Resmi</label>
+    @Html.TextBoxFor(x => x.ImageUrl, new { @class = "form-control" })
+    <br /><br />
+    <label>Eğitmen Başlığı</label>
+    @Html.TextBoxFor(x => x.Title, new { @class = "form-control" })
+    <br /><br />
+    <label>Kapak Fotosu</label>
+    @Html.TextBoxFor(x => x.CoverImage, new { @class = "form-control" })
+    <br /><br />
+    <label>Eğitmen E-Mail Adresi</label>
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    <br /><br />
+    <label>Eğitmen Sifresi</label>
+    @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+    <br /><br />
+    @*<label>z</label>
+        @Html.TextBoxFor(x => x.Image, new { @class = "form-control" })*@
+    <br /><br />
+    <button class="btn btn-primary">Yeni Eğitmeni Kaydet</button>
+</form>
+

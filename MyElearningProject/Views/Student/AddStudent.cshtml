@@ -1,0 +1,23 @@
+﻿@model MyElearningProject.DAL.Entites.Student
+@{
+    ViewBag.Title = "AddStudent";
+    Layout = "~/Views/AdminLayout/Index.cshtml";
+}
+
+<h2>Yeni Öğrenci Ekleme Sayfası</h2>
+
+<form method="post">
+    <label>Öğrenci Adını Giriniz</label>
+    @Html.TextBoxFor(x => x.Name, new { @class = "form-control" })
+    <br /><br />
+    <label>Öğrenci Soyadını Giriniz</label>
+    @Html.TextBoxFor(x => x.Surname, new { @class = "form-control" })
+    <br /><br />
+    <label>Öğrenci E-Mail Adresini Giriniz</label>
+    @Html.TextBoxFor(x => x.Email, new { @class = "form-control" })
+    <br /><br />
+    <label>Öğrenci Sifresini Oluştur</label>
+    @Html.TextBoxFor(x => x.Password, new { @class = "form-control" })
+    <br /><br />
+    <button class="btn btn-primary">Öğrenci Kaydet</button>
+</form>
